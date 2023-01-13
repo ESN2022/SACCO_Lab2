@@ -49,8 +49,7 @@ La structure finale du système est représentée par le schéma ci-contre:
 
 J'obtiens alors le Pin Planner suivant:
 
-![image](https://user-images.githubusercontent.com/104905653/212297478-a848a0fa-2aab-4e27-936d-8d084654dbfb.png)
-
+![image](https://user-images.githubusercontent.com/104905653/212298457-69dd15a6-4381-431b-b0ef-36a90d989ccb.png)
 ### 1.2 Programmation C
 #### 1.2.1 Boucles imbriquées
 
