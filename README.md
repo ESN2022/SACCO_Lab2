@@ -17,12 +17,15 @@ J'utilise donc les blocs IPs suivants:
  * 1 PIO de largeur 4 bits
 
 J’ai par la suite ouvert Platform Designer pour relier l’ensemble, en ajoutant également une horloge pour cadencer le système. Après avoir assigner les adresses de base, j’obtiens le schéma suivant :
-[INSERER IMAGE QSYS]
-J’ai ensuite sauvegardé et générer mon HDL. Sous Quartus, il a maintenant fallu créer le composant permettant de convertir les chiffres binaires en chiffres affichables sur l’afficheur 7 segments. Pour cela, j’ai simplement regardé dans le Guide Utilisateur comment les LEDs de l’afficheur était organisé, de sorte que lorsque j’ai un certain chiffre en entrée, mon composant allume les leds nécessaire pour afficher ce chiffre. Ce composant reçoit donc en entrée un chiffre codé sur 4 bits et renvoie, vers l’afficheur, un mot de 8 bits. Il était toutefois possible de ne renvoyer qu’un mot de 7bits, car le dernier bit correspond à la virgule, que l’on n’utilise jamais pour cet exercice.
+
+![QSYS_1digit](https://user-images.githubusercontent.com/104905653/212292982-54f5b51f-dc4f-495f-b0de-4c5ff556a9ad.PNG)
+
+
+J’ai ensuite sauvegardé et générer mon HDL. Sous Quartus, il a maintenant fallu créer le composant permettant de convertir les chiffres binaires en chiffres affichables sur l’afficheur 7 segments. Pour cela, j’ai simplement regardé dans le Guide Utilisateur comment les LEDs de l’afficheur était organisée, de sorte que lorsque j’ai un certain chiffre en entrée, mon composant allume les leds nécessaire pour afficher ce chiffre. Ce composant reçoit donc en entrée un chiffre codé sur 4 bits et renvoie, vers l’afficheur, un mot de 8 bits. Il était toutefois possible de ne renvoyer qu’un mot de 7bits, car le dernier bit correspond à la virgule, que l’on n’utilise jamais pour cet exercice.
 
 En me référant encore une fois au Guide Utilisateur, j’ai ensuite pu effectuer mon Pin Assignement, comme décrit ci-dessous :
 
-[INSERER IMAGE PIN ASSIGNEMENT]
+![Pin_planner_lab2_1digit](https://user-images.githubusercontent.com/104905653/212293296-91152353-7929-49e1-953f-6f0e348f9e8e.png)
 
 Une fois cela fait, je peux passer à la programmation de mon FPGA et à l’écriture du code C.
 
@@ -32,11 +35,24 @@ Je crée tout d’abord un répertoire software, ainsi que 2 sous-répertoires, 
 Voici une démonstration ci-dessous :
 
 ## C. Compteur 3 digits
+
+
 ### 1. System Architecture
 ### 1.1 Design QSYS
+
+![image](https://user-images.githubusercontent.com/104905653/212297131-02bb5215-76da-438e-aec5-7a0f139a1fb8.png)
+![timer](https://user-images.githubusercontent.com/104905653/212296864-6b634ee8-e31f-4461-81a4-fd746c479f16.png)
+
+J'obtiens alors le Pin Planner suivant:
+
+![image](https://user-images.githubusercontent.com/104905653/212297478-a848a0fa-2aab-4e27-936d-8d084654dbfb.png)
+
 ### 1.2 Programmation C
 #### 1.2.1 Boucles imbriquées
+
 #### 1.2.2 Utilisation d’un Timer
+
+
 
 
 
