@@ -40,6 +40,10 @@ Voici une démonstration ci-dessous :
 ### 1. System Architecture
 ### 1.1 Design QSYS
 
+La structure finale du système est représentée par le schéma ci-contre:
+
+![LAB2_SCHEMA_Timer](https://user-images.githubusercontent.com/104905653/212297683-03b32404-5452-45d7-bb23-e7b9e6c7ea57.png)
+
 ![image](https://user-images.githubusercontent.com/104905653/212297131-02bb5215-76da-438e-aec5-7a0f139a1fb8.png)
 ![timer](https://user-images.githubusercontent.com/104905653/212296864-6b634ee8-e31f-4461-81a4-fd746c479f16.png)
 
