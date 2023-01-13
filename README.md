@@ -1,14 +1,20 @@
 # SACCO_Lab2 – « Let’s count stuff »
 ## A. Introduction
+
 L’objectif de ce TP était d’implémenter un compteur que l’on verrait s’incrémenter grâce aux afficheurs 7 segments. Dans un premier temps, on verra comment a été structurée l’architecture du système ainsi que le code C associé, dans le cadre d’un compteur décimal n’utilisant qu’un unique afficheur 7 segments.  Ensuite, on verra comment la structure a été adaptée pour réaliser cette fois-ci un compteur utilisant 3 afficheurs 7 segments, ainsi que le code C associé. On présentera tout d’abord le fonctionnement à l’aide de boucles imbriquées puis via l’utilisation de timer.
+
 ## B. Compteur 1 Digit 
 ### 1. System Architecture
 #### 1.1 Design QSYS
+
 Pour ce compteur d’une unité, j’ai choisi de structurer mon architecture comme suivant :
-  -NIOS2
-  -JTAG-UART
-  -RAM: Je n’ai pas eu à modifier sa valeur
-  -1 PIO de largeur 4 bits
+![LAB2_SCHEMA](https://user-images.githubusercontent.com/104905653/212286973-e9c97e0d-f328-4485-9cc4-e3ab166f0520.png)
+
+J'utilise donc les blocs IPs suivants:
+ * NIOS2
+ * JTAG-UART
+ * RAM: Je n’ai pas eu à modifier sa valeur
+ * 1 PIO de largeur 4 bits
 
 J’ai par la suite ouvert Platform Designer pour relier l’ensemble, en ajoutant également une horloge pour cadencer le système. Après avoir assigner les adresses de base, j’obtiens le schéma suivant :
 [INSERER IMAGE QSYS]
