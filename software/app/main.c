@@ -28,17 +28,18 @@
 
 
 unsigned int i =0;
-int cnt;
 static void timer_irq()
 {
 
 	if ((i&0xF) ==10)
 	{
 		i =i+6;
-	}
-	else if ((i&0xF0)>>4 ==10)
-	{
-		i=i+96;
+		if ((i&0xF0)>>4 ==10)
+		{
+			i=i+96;
+			if ((i&0xF00)>>8 ==10) i = 0;
+			
+		}
 	}
 	IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE,i);		
 	i++;
@@ -47,7 +48,6 @@ static void timer_irq()
 
 int main()
 {
-
 	alt_irq_register(TIMER_0_IRQ,NULL,timer_irq);
 	while(1);
 	return 0;
