@@ -61,6 +61,8 @@ Le fonctionnement est illustré par la vidéo ci-dessous:
 
 https://user-images.githubusercontent.com/104905653/212538150-ea0c1cfc-68b8-4120-bd71-dc9498d38845.mp4
 
+A noter qu'il faut également lancer la commande nios2-terminal.exe car si on ne le fait pas, le buffer ne se vide pas à la suite des appels réguliers à la fonction printf, ce qui va finir par interrompre le fonctionnement.
+
 ## Conclusion
 
 <p align="justify">Ce TP avait pour objectif final de créer un compteur de 3 chiffres s'incrémentant toutes les secondes grâce à un timer et d'afficher sa valeur sur l'afficheur 7 segments. Cet objectif a donc été atteint. Durant ce TP, j'ai pu continuer de prendre en main Platform Designer avec cette fois-ci un réel aspect co-design, grâce à la présence d'un composant bin_to_7seg. J'ai également pu travailler sur la manipulation de bits grâce à mon système de comptage consistant à ajouter certaines valeurs à mon compteur. Enfin, cela a également été l'occasion d'utiliser des interruptions, cette fois-ci sous la forme de timer.</p>
