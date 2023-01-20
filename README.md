@@ -52,8 +52,8 @@ Afin de savoir quelles LEDs de l'afficheur 7 segment doivent s'allumer, je me su
 * Lorsque les 4 premiers bits de mon signal, i.e. le chiffres des unités, valent 1010, soit 10 en décimale, cela signifie que le chiffre des dizaines doit s'icrémenter de 1. Par exemple, pour passer de 9 à 10, les 4 bits des dizaines doivent valoir 0001. Pour faire cela, il suffit d'ajouter 6 à mon signal, de sorte que l'on ait 10+6 = 16, soit, en binaire, 0000 1010 + 0110 = 0001 0000.
 * De même, lorsque mon compteur vaut 0000 1010 0000 = 160 en décimale, il faut incrémenter de 1 le chiffre des centaines. Cette fois-ci, on ajoute 96 à notre signal, de sorte que l'on ait, par exemple pour passer de 99 à 100, le calcul suivant: 160 + 96 = 256, donc 0000 1010 0000 + 0000 0110 0000 = 0001 0000 0000.
 
-<p align="justify">Le fonctionnement décrit-ci dessus est situé dans ma routine d'interruption timer_irq, qui s'executera toutes les secondes. Pour cela, il suffit d'initialiser mon timer via la ligne suivante:
-` alt_irq_register(TIMER_0_IRQ,NULL,timer_irq); ` </p>
+Le fonctionnement décrit-ci dessus est situé dans ma routine d'interruption timer_irq, qui s'executera toutes les secondes. Pour cela, il suffit d'initialiser mon timer via la ligne suivante:
+` alt_irq_register(TIMER_0_IRQ,NULL,timer_irq); `
 
 ### 2.2 Progress & Results
 
