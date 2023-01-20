@@ -1,4 +1,4 @@
-# SACCO_Lab2 – « Let’s count stuff »
+# SACCO_Lab2 – " Let’s count stuff "
 ## Introduction
 
 <p align="justify"> L’objectif de ce TP était d’implémenter un compteur que l’on verrait s’incrémenter grâce aux afficheurs 7 segments. Dans un premier temps, on verra comment a été structurée l’architecture du système ainsi que le code C associé, dans le cadre d’un compteur décimal n’utilisant qu’un unique afficheur 7 segments.  Ensuite, on verra comment la structure a été adaptée pour réaliser cette fois-ci un compteur utilisant 3 afficheurs 7 segments, ainsi que le code C associé. Ce dernier permettra également d'illustrer le fonctionnement d'un timer. </p>
